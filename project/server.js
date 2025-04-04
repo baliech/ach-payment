@@ -21,11 +21,7 @@ const plaidConfig = new Configuration({
 const plaidClient = new PlaidApi(plaidConfig);
 
 // Middleware
-app.use(cors({
-    origin: ['https://bitonpath.netlify.app'], // Allow only your Netlify frontend
-    methods: ['GET', 'POST'],
-    credentials: true
-}));
+app.use(cors);
 app.use(express.json());
 app.use(express.static('public'));
 
